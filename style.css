@@ -96,7 +96,7 @@ body {
     display: none;
 }
 
-/* .circulos{
+.circulos{
     position: fixed;
     height: 100%;
     width: 100%;
@@ -157,7 +157,7 @@ body {
 
 .circulos .circulo4 .path {
     fill: rgb(188, 128, 215);
-} */
+}
 
 /*SECCIÓN HEADER*/
 
