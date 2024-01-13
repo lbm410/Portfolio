@@ -99,7 +99,6 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: lightblue;
     z-index: 1;
     filter: blur(70px);
     animation: circulo1 15s linear infinite both;
@@ -330,7 +329,6 @@ body {
 
 .about .p{
     max-width: 40rem;
-    background: lime;
     margin: 0 0 2rem;
     text-align: left;
     font-size: 1.3em;
