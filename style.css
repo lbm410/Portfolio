@@ -359,8 +359,9 @@ body {
 }
 
 .footer {
-    background-color: lightpink;
+    background-color: transparent;
     text-align: center;
+    color: white;
     padding: 2em 0;
 }
 
