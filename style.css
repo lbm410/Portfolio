@@ -251,6 +251,13 @@ body {
     font-style: italic;
 }
 
+.arrowdown {
+    position: relative;
+    top: 250px;
+    height: 2em;
+    width: 2em;
+}
+
 /* .seccion .p{} */
 
 .seccion .grid {
