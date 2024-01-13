@@ -157,10 +157,13 @@ body {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 
 }
 
-.header .h1 {}
+.header .h1 {
+    z-index: 2;
+}
 
 .header .h1 .a {}
 
@@ -171,10 +174,14 @@ body {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+
+    z-index: 2;
 }
 
 .header .li {
     margin: 0 1em;
+
+    z-index: 2;
 }
 
 .header .li .a {}
@@ -364,13 +371,14 @@ mark,
 /*SECCIÓN FOOTER*/
 
 .footer {
-    background-color: transparent;
     text-align: center;
     color: black;
     padding: 2em 0;
     z-index: 2;
 }
 
-.footer .span {}
+.footer .span {
+    z-index: 2;
+}
 
 
