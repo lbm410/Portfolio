@@ -92,10 +92,6 @@ body {
     width: 100%;
 }
 
-.circulos {
-    display: none;
-}
-
 .circulos{
     position: fixed;
     height: 100%;
