@@ -92,6 +92,71 @@ body {
     width: 100%;
 }
 
+
+.circulos{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+    z-index: 1;
+    filter: blur(70px);
+    animation: circulo1 15s linear infinite both;
+}
+
+.circulos .circulo {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    filter: blur(50px);
+    animation: circulo1 100s linear infinite both;
+}
+
+.circulos .circulo1{
+    top: 0%;
+    left: 0%;
+}
+@keyframes circulo1 {
+    from{
+        transform: rotate(0deg) scale(3);
+    }
+    to{
+        transform: rotate(360deg) scale(3);
+    }
+}
+
+.circulos .circulo1 .path {
+    fill: rgb(34, 89, 37);
+}
+
+.circulos .circulo2{
+    top: 0%;
+    right: 0%;
+}
+
+.circulos .circulo2 .path {
+    fill: rgb(71, 116, 179);
+}
+
+.circulos .circulo3{
+    bottom: 0%;
+    left: 0%;
+}
+
+.circulos .circulo3 .path {
+    fill: rgb(227, 198, 52);
+}
+
+.circulos .circulo4{
+    bottom: 0%;
+    right: 0%;
+}
+
+.circulos .circulo4 .path {
+    fill: rgb(130, 43, 170);
+}
+
 /*SECCIÓN HEADER*/
 
 .header {
@@ -131,15 +196,15 @@ body {
 /*SECCIÓN PRINCIPAL*/
 
 .main{
-    background-color: lightgray;
     margin: 1em 0;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .seccion{
     width: 100%;
     min-height: 80vh;
-    background-color: lightblue;
     /* margin: 1em 0; */
     padding: 2em;
 
@@ -152,10 +217,6 @@ body {
 .seccion .info{
     font-size: 1.2em;
 }
-
-.seccion .circulos{}
-
-.seccion .circulo{}
 
 .seccion .ul{
     display: inline-block;
@@ -197,7 +258,6 @@ body {
 .seccion .grid{
     max-width: 40em;
     width: 90%;
-    background: lightcoral;
     margin: 1em 0;
 
     display: grid;
@@ -221,26 +281,39 @@ body {
 
 .seccion .figure{
     width: 100%;
-    background: red;
 }
 
 .seccion .img{
     width: 100%;
-    background-color: green;
 }
 
 .seccion .h4{
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(1rem);
     position: absolute;
     bottom: 0;
     left: 0;
+    opacity: 0;
+
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+    font-style: italic;
+    font-family: var(--tipo-titular);
 
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    transform: translateZ(1) scale(1.5);
+    transition: all .5s ease;
+}
+
+.seccion .article:hover .h4{
+    opacity: 1;
+    transform: translateZ(1) scale(1);
 }
 
 .works .h2 {
@@ -252,14 +325,15 @@ body {
 .about{}
 
 .about .h2{
-    margin: 0 0 1rem;
+    margin: 0 0 2rem;
 }
 
 .about .p{
-    max-width: 40em;
+    max-width: 40rem;
     background: lime;
-    margin: 0 0 1em;
+    margin: 0 0 2rem;
     text-align: left;
+    font-size: 1.3em;
 }
 
 .about .rrss {
@@ -281,7 +355,6 @@ body {
 .about .svg {
     width: 2em;
     height: 2em;
-    background-color: #e50914;
     vertical-align: middle; /* Alineación vertical centrada */
 }
 
