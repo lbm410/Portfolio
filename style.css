@@ -92,8 +92,11 @@ body {
     width: 100%;
 }
 
+.circulos {
+    display: none;
+}
 
-.circulos{
+/* .circulos{
     position: fixed;
     height: 100%;
     width: 100%;
@@ -101,7 +104,7 @@ body {
     left: 0;
     z-index: 1;
     filter: blur(70px);
-    animation: circulo1 15s linear infinite both;
+    animation: circulo1 10s linear infinite both;
 }
 
 .circulos .circulo {
@@ -154,14 +157,13 @@ body {
 
 .circulos .circulo4 .path {
     fill: rgb(188, 128, 215);
-}
+} */
 
 /*SECCIÓN HEADER*/
 
 .header {
     width: 100%;
     min-width: 5em;
-    background-color: lightblue;
 
     padding: 1em 2em;
 
@@ -170,7 +172,6 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    display: none;
 }
 
 .header .h1 {}
@@ -254,20 +255,20 @@ body {
 
 .seccion .p{}
 
-.seccion .grid{
+.seccion .grid {
     max-width: 40em;
     width: 90%;
-    margin: 1em 0;
+    margin: 3em 0;
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax( 10rem, 1fr));
-    gap: 1em;
+    display: flex;
+    flex-wrap: row nowrap; /* Permite que los elementos se envuelvan en filas */
+    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
 }
 
-.seccion .article{
-    width: 100%;
+.seccion .article {
+    width: 100%; /* Establece el ancho de cada proyecto, restando el espacio entre ellos */
     min-height: 20vh;
-    background: lightgoldenrodyellow;
+    margin-bottom: 0%; /* Espacio entre las filas */
 
     display: flex;
     flex-flow: column nowrap;
@@ -356,12 +357,32 @@ body {
     vertical-align: middle; /* Alineación vertical centrada */
 }
 
+mark,
+.mark {
+	padding: 1px 2px;
+    border: 1px transparent;
+    border-radius: 2px;
+	color: #fff;
+	background: #b5b5b5;
+}
+
+.tech {
+    width: 3em;
+    margin: 2em;
+    display: inline-block;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*SECCIÓN FOOTER*/
+
 .footer {
     background-color: transparent;
     text-align: center;
-    color: white;
+    color: black;
     padding: 2em 0;
-    z-index: 3;
+    z-index: 2;
 }
 
 .footer .span {}
