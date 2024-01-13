@@ -165,9 +165,9 @@ body {
     z-index: 2;
 }
 
-.header .h1 .a {}
+/**.header .h1 .a {}
 
-.header .nav {}
+.header .nav {}**/
 
 .header .ul {
     display: flex;
@@ -184,7 +184,7 @@ body {
     z-index: 2;
 }
 
-.header .li .a {}
+/*.header .li .a {}*/
 
 /*SECCIÓN PRINCIPAL*/
 
@@ -246,7 +246,7 @@ body {
     font-style: italic;
 }
 
-.seccion .p{}
+/* .seccion .p{} */
 
 .seccion .grid {
     max-width: 40em;
@@ -270,7 +270,7 @@ body {
     position: relative;
 }
 
-.seccion .a{}
+/* .seccion .a{} */
 
 .seccion .figure{
     width: 100%;
@@ -315,7 +315,7 @@ body {
 
 /*SECCIÓN SOBRE MI*/
 
-.about{}
+/* .about{} */
 
 .about .h2{
     margin: 0 0 2rem;
