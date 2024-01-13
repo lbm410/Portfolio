@@ -127,7 +127,7 @@ body {
 }
 
 .circulos .circulo1 .path {
-    fill: rgb(34, 89, 37);
+    fill: rgb(101, 171, 105);
 }
 
 .circulos .circulo2{
@@ -136,7 +136,7 @@ body {
 }
 
 .circulos .circulo2 .path {
-    fill: rgb(71, 116, 179);
+    fill: rgb(149, 188, 241);
 }
 
 .circulos .circulo3{
@@ -145,7 +145,7 @@ body {
 }
 
 .circulos .circulo3 .path {
-    fill: rgb(227, 198, 52);
+    fill: rgb(255, 231, 108);
 }
 
 .circulos .circulo4{
@@ -154,7 +154,7 @@ body {
 }
 
 .circulos .circulo4 .path {
-    fill: rgb(130, 43, 170);
+    fill: rgb(188, 128, 215);
 }
 
 /*SECCIÓN HEADER*/
