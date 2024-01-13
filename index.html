@@ -7,32 +7,76 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/88d4f9be42.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script defer src="/js/index.js"></script>
 </head>
 <body>
+
     <header class="header">
-        <a href="#" class="logo">Lucas<br>Barrientos</a>
-
-        <input type="checkbox" id="check">
-        <label for="check" class="menu">
-            <i class="fa-solid fa-bars" id="menu-icon"></i>
-            <i class="fa-solid fa-xmark" id="close-icon"></i>
-        </label>
-
-        <nav class="navbar">
-            <a href="#" style="--i:0">Inicio</a>
-            <a href="#" style="--i:1">Sobre Mi</a>
-            <a href="#" style="--i:2">Proyectos</a>
-            <a href="#" style="--i:3">Contacto</a>
-            <a href="https://instagram.com/lucxskrt" target="_blank" style="--i:4"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://linkedin.com/in/lucasbarrientosdev" target="_blank" style="--i:5"><i class="fa-brands fa-linkedin"></i></a>
+        <h1 class="h1"><a href="#inicio" class="a">Lucas Barrientos</a></h1>
+        <nav class="nav">
+            <ul class="ul">
+                <li class="li"><a href="#inicio" title="Inicio" class="a">Inicio</a></li>
+                <li class="li"><a href="#trabajos" title="Trabajos" class="a">Trabajos</a></li>
+                <li class="li"><a href="#contacto" title="Contacto" class="a">Contacto</a></li>
+            </ul>
         </nav>
     </header>
 
-    <div class="building">
-        <h1>En construcción...</h1>
-    </div>
+    <main class="main">
+
+        <div class="seccion" id="inicio">
+            <div class="circulos">
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+            </div>
+            <section class="section">
+                <h2 class="h2">Lucas Barrientos</h2>
+                <h3 class="h3">Frontend Developer</h3>
+            </section>
+        </div>
+
+        <section class="seccion" id="trabajos">
+            
+            <h2 class="h2">Trabajos</h2>
+            <p>Aquí te presento mis trabajos mientras estudiaba un curso de HTML, 
+                CSS y JavaScript</p>
+
+            <div class="grid">
+                <article class="article">
+                    <a href="#" title="Trabajo1">
+                        <img src="#" alt="Imagen" class="img" loading="lazy">
+                        <h4 class="h4">Nombre trabajo</h4>
+                    </a>
+                </article>
+            </div>
+
+        </section>
+
+        <section class="seccion" id="contacto">
+            <h2 class="h2">Sobre mi</h2>
+            <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit exercitationem doloribus aut repellendus.</p>
+            <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eius eligendi, repellat eos totam soluta.</p>
+            <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, libero obcaecati nobis iusto eaque enim.</p>
+
+            <ul class="rrss">
+                <li class="li">
+                    <a href="#" class="a" title="Nombre" target="_blank" rel="noopener noreferrer">
+                        <svg class="svg"></svg>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <span class="span">Made with love ❤️ Lucas Barrientos</span>
+
+    </footer>
 
 </body>
 </html>
