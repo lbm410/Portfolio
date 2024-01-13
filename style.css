@@ -124,9 +124,24 @@ body {
 
 .header .li .a {}
 
-.main{}
+.main{
+    background-color: lightgray;
+    margin: 1em 0;
+    text-align: center;
+}
 
-.seccion{}
+.seccion{
+    width: 100%;
+    min-height: 80vh;
+    background-color: lightblue;
+    margin: 1em 0;
+    padding: 2em;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
 
 .seccion .circulos{}
 
@@ -138,11 +153,23 @@ body {
 
 .seccion .p{}
 
-.seccion .grid{}
+.seccion .grid{
+    width: 90%;
+    background: lightcoral;
 
-.seccion .article{}
+    display: grid;
+    grid-template-columns: repeat( auto-fit , minmax(10rem, 1fr));
+    gap: 1em;
+}
+
+.seccion .article{
+    width: 100%;
+    background: lightgoldenrodyellow;
+}
 
 .seccion .a{}
+
+.seccion .figure{}
 
 .seccion .img{}
 

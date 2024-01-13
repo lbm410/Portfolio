@@ -1,82 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Barrientos</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script defer src="/js/index.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lucas Barrientos</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <script defer src="/js/index.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="h1"><a href="#inicio" class="a">Lucas Barrientos</a></h1>
+            <nav class="nav">
+                <ul class="ul">
+                    <li class="li">
+                        <a href="#inicio" title="Inicio" class="a">Inicio</a>
+                    </li>
+                    <li class="li">
+                        <a href="#trabajos" title="Trabajos" class="a"
+                            >Trabajos</a
+                        >
+                    </li>
+                    <li class="li">
+                        <a href="#contacto" title="Contacto" class="a"
+                            >Contacto</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <header class="header">
-        <h1 class="h1"><a href="#inicio" class="a">Lucas Barrientos</a></h1>
-        <nav class="nav">
-            <ul class="ul">
-                <li class="li"><a href="#inicio" title="Inicio" class="a">Inicio</a></li>
-                <li class="li"><a href="#trabajos" title="Trabajos" class="a">Trabajos</a></li>
-                <li class="li"><a href="#contacto" title="Contacto" class="a">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="main">
-
-        <div class="seccion" id="inicio">
-            <div class="circulos">
-                <div class="circulo"></div>
-                <div class="circulo"></div>
-                <div class="circulo"></div>
-                <div class="circulo"></div>
+        <main class="main">
+            <div class="seccion" id="inicio">
+                <div class="circulos">
+                    <div class="circulo"></div>
+                    <div class="circulo"></div>
+                    <div class="circulo"></div>
+                    <div class="circulo"></div>
+                </div>
+                <section class="section">
+                    <h2 class="h2">Lucas Barrientos</h2>
+                    <h3 class="h3">Frontend Developer</h3>
+                </section>
             </div>
-            <section class="section">
-                <h2 class="h2">Lucas Barrientos</h2>
-                <h3 class="h3">Frontend Developer</h3>
+
+            <section class="seccion" id="trabajos">
+                <h2 class="h2">Trabajos</h2>
+                <p>
+                    Aquí te presento mis trabajos mientras estudiaba un curso de
+                    HTML, CSS y JavaScript
+                </p>
+
+                <div class="grid">
+                    <article class="article">
+                        <a class="a" href="#" title="Trabajo1">
+                            <figure class="figure">
+                                <img
+                                    src="#"
+                                    alt="Imagen"
+                                    class="img"
+                                    loading="lazy"
+                                />
+                            </figure>
+                            <h4 class="h4">Nombre trabajo</h4>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid">
+                    <article class="article">
+                        <a class="a" href="#" title="Trabajo1">
+                            <figure class="figure">
+                                <img
+                                    src="#"
+                                    alt="Imagen"
+                                    class="img"
+                                    loading="lazy"
+                                />
+                            </figure>
+                            <h4 class="h4">Nombre trabajo</h4>
+                        </a>
+                    </article>
+                </div>
             </section>
-        </div>
 
-        <section class="seccion" id="trabajos">
-            
-            <h2 class="h2">Trabajos</h2>
-            <p>Aquí te presento mis trabajos mientras estudiaba un curso de HTML, 
-                CSS y JavaScript</p>
+            <section class="seccion" id="contacto">
+                <h2 class="h2">Sobre mi</h2>
+                <p class="p">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Facere dolore velit exercitationem doloribus aut
+                    repellendus.
+                </p>
+                <p class="p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Obcaecati eius eligendi, repellat eos totam soluta.
+                </p>
+                <p class="p">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Harum, libero obcaecati nobis iusto eaque enim.
+                </p>
 
-            <div class="grid">
-                <article class="article">
-                    <a class="a" href="#" title="Trabajo1">
-                        <img src="#" alt="Imagen" class="img" loading="lazy">
-                        <h4 class="h4">Nombre trabajo</h4>
-                    </a>
-                </article>
-            </div>
+                <ul class="rrss">
+                    <li class="li">
+                        <a
+                            href="#"
+                            class="a"
+                            title="Nombre"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <svg class="svg"></svg>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
 
-        </section>
-
-        <section class="seccion" id="contacto">
-            <h2 class="h2">Sobre mi</h2>
-            <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit exercitationem doloribus aut repellendus.</p>
-            <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eius eligendi, repellat eos totam soluta.</p>
-            <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, libero obcaecati nobis iusto eaque enim.</p>
-
-            <ul class="rrss">
-                <li class="li">
-                    <a href="#" class="a" title="Nombre" target="_blank" rel="noopener noreferrer">
-                        <svg class="svg"></svg>
-                    </a>
-                </li>
-            </ul>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-
-        <span class="span">Made with love ❤️ Lucas Barrientos</span>
-
-    </footer>
-
-</body>
+        <footer class="footer">
+            <span class="span">Made with love ❤️ Lucas Barrientos</span>
+        </footer>
+    </body>
 </html>
