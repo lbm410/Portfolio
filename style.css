@@ -361,6 +361,7 @@ body {
     text-align: center;
     color: white;
     padding: 2em 0;
+    z-index: 3;
 }
 
 .footer .span {}
