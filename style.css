@@ -91,3 +91,75 @@ body {
 .cuadrado {
     width: 100%;
 }
+
+.header {
+    width: 100%;
+    min-width: 5em;
+    background-color: lightblue;
+
+    padding: 1em 2em;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .h1 {}
+
+.header .h1 .a {}
+
+.header .nav {}
+
+.header .ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .li {
+    margin: 0 1em;
+}
+
+.header .li .a {}
+
+.main{}
+
+.seccion{}
+
+.seccion .circulos{}
+
+.seccion .circulo{}
+
+.seccion .h2{}
+
+.seccion .h3{}
+
+.seccion .p{}
+
+.seccion .grid{}
+
+.seccion .article{}
+
+.seccion .a{}
+
+.seccion .img{}
+
+.seccion .h4{}
+
+.about{}
+
+.about .h2{}
+
+.about .p{}
+
+.about .rrss{}
+
+.about .li{}
+
+.about .a{}
+
+.about .svg{}
+
+
