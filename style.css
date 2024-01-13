@@ -92,6 +92,8 @@ body {
     width: 100%;
 }
 
+/*SECCIÓN HEADER*/
+
 .header {
     width: 100%;
     min-width: 5em;
@@ -103,6 +105,8 @@ body {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+
+    display: none;
 }
 
 .header .h1 {}
@@ -124,6 +128,8 @@ body {
 
 .header .li .a {}
 
+/*SECCIÓN PRINCIPAL*/
+
 .main{
     background-color: lightgray;
     margin: 1em 0;
@@ -134,7 +140,7 @@ body {
     width: 100%;
     min-height: 80vh;
     background-color: lightblue;
-    margin: 1em 0;
+    /* margin: 1em 0; */
     padding: 2em;
 
     display: flex;
@@ -143,17 +149,53 @@ body {
     align-items: center;
 }
 
+.seccion .info{
+    font-size: 1.2em;
+}
+
 .seccion .circulos{}
 
 .seccion .circulo{}
 
-.seccion .h2{}
+.seccion .ul{
+    display: inline-block;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0 0;
+}
 
-.seccion .h3{}
+.seccion .ul .a{
+    border-bottom: 1px solid rgba(0, 0, 0, .5);   
+
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 1em 1em 1em; 
+    transition: all .5s ease;
+}
+
+.seccion .ul .a:hover {
+    background: black;
+    color: white;
+}
+
+.seccion .h2{
+    font-family: var(--tipo-titular);
+    font-weight: 500;
+    font-size: 5em;
+    line-height: 1em;
+}
+
+.seccion .h3{
+    font-family: var(--tipo-titular);
+    font-size: 3.5em;
+    font-style: italic;
+}
 
 .seccion .p{}
 
 .seccion .grid{
+    max-width: 40em;
     width: 90%;
     background: lightcoral;
     margin: 1em 0;
@@ -189,8 +231,8 @@ body {
 
 .seccion .h4{
     width: 100%;
-    height: 50%;
-    background: lightcoral;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .5);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -201,18 +243,54 @@ body {
     align-items: center;
 }
 
+.works .h2 {
+    margin: 0 0 1rem;
+}
+
+/*SECCIÓN SOBRE MI*/
+
 .about{}
 
-.about .h2{}
+.about .h2{
+    margin: 0 0 1rem;
+}
 
-.about .p{}
+.about .p{
+    max-width: 40em;
+    background: lime;
+    margin: 0 0 1em;
+    text-align: left;
+}
 
-.about .rrss{}
+.about .rrss {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
 
-.about .li{}
+.about .li {
+    margin: 0 1em;
+}
 
-.about .a{}
+.about .a {
+    display: inline-block; /* Añadido para asegurar que el enlace sea en línea */
+}
 
-.about .svg{}
+.about .svg {
+    width: 2em;
+    height: 2em;
+    background-color: #e50914;
+    vertical-align: middle; /* Alineación vertical centrada */
+}
+
+.footer {
+    background-color: lightpink;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.footer .span {}
 
 
