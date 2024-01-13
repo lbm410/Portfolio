@@ -21,7 +21,6 @@ img, figure {
     width: 100%;
     display: flex;
     object-fit: cover;
-    object-position: center center;
 }
 
 a {
@@ -100,60 +99,51 @@ body {
     left: 0;
     z-index: 1;
     filter: blur(70px);
-    animation: circulo1 10s linear infinite both;
+    animation: circulo1 30s linear infinite both;
 }
+
 
 .circulos .circulo {
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 260px;
+    height: 260px;
     filter: blur(50px);
     animation: circulo1 100s linear infinite both;
 }
 
-.circulos .circulo1{
-    top: 0%;
-    left: 0%;
+.circulos .circulo1 {
+    top: 10%;
+    left: 10%;
+    filter: invert(29%) sepia(71%) saturate(1236%) hue-rotate(78deg) brightness(92%) contrast(89%);
 }
+
 @keyframes circulo1 {
-    from{
+    from {
         transform: rotate(0deg) scale(3);
     }
-    to{
+    to {
         transform: rotate(360deg) scale(3);
     }
 }
 
-.circulos .circulo1 .path {
-    fill: rgb(101, 171, 105);
+.circulos .circulo2 {
+    top: 10%;
+    right: 10%;
+    filter: invert(24%) sepia(43%) saturate(3973%) hue-rotate(214deg) brightness(87%) contrast(85%);
 }
 
-.circulos .circulo2{
-    top: 0%;
-    right: 0%;
+.circulos .circulo3 {
+    bottom: 10%;
+    left: 10%;
+    filter: invert(80%) sepia(5%) saturate(3944%) hue-rotate(63deg) brightness(91%) contrast(84%);
 }
 
-.circulos .circulo2 .path {
-    fill: rgb(149, 188, 241);
+.circulos .circulo4 {
+    bottom: 10%;
+    right: 10%;
+    filter: invert(50%) sepia(83%) saturate(212%) hue-rotate(263deg) brightness(84%) contrast(87%);
 }
 
-.circulos .circulo3{
-    bottom: 0%;
-    left: 0%;
-}
-
-.circulos .circulo3 .path {
-    fill: rgb(255, 231, 108);
-}
-
-.circulos .circulo4{
-    bottom: 0%;
-    right: 0%;
-}
-
-.circulos .circulo4 .path {
-    fill: rgb(188, 128, 215);
-}
 
 /*SECCIÓN HEADER*/
 
