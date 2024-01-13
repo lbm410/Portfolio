@@ -105,8 +105,8 @@ body {
 
 .circulos .circulo {
     position: absolute;
-    width: 260px;
-    height: 260px;
+    width: 300px;
+    height: 300px;
     filter: blur(50px);
     animation: circulo1 100s linear infinite both;
 }
@@ -205,6 +205,11 @@ body {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+.seccion#inicio {
+    padding-top: 15em;
+    padding-bottom: 20em;
 }
 
 .seccion .info{
