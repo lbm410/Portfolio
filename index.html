@@ -13,7 +13,7 @@
             rel="stylesheet"
             
         />
-        <script defer src="/js/index.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     </head>
     <body>
         <div class="circulos">
@@ -28,19 +28,36 @@
             <nav class="nav">
                 <ul class="ul">
                     <li class="li">
-                        <a href="#inicio" title="Inicio" class="a">Inicio</a>
+                        <a href="#inicio" title="Inicio" class="a" id="inicio">Inicio</a>
                     </li>
                     <li class="li">
-                        <a href="#trabajos" title="Trabajos" class="a"
-                            >Proyectos</a
-                        >
+                        <a href="#trabajos" title="Trabajos" class="a" id="proyectos">Proyectos</a>
                     </li>
                     <li class="li">
-                        <a href="#about" title="Contacto" class="a">Sobre Mi</a>
+                        <a href="#about" title="Contacto" class="a" id="sobre_mi">Sobre Mi</a>
+                    </li>
+                    <li class="li">
+                        <div class="dark-mode">
+                            <span class="material-icons-sharp active">
+                                light_mode
+                            </span>
+                            <span class="material-icons-sharp">
+                                dark_mode
+                            </span>
+                        </div>
+                        <li class="li idioma-li">
+                            <div class="langs" title="Idioma">
+                                <img src="assets/language.svg" alt="Language" class="language">
+                            </div>
+                            <ul class="idioma-desplegable">
+                                <li><a href="#" class="active" data-lang="spanish"><img src="assets/spain.svg" alt="Spanish" class="flag"></a></li>
+                                <li><a href="#" data-lang="english"><img src="assets/usa.svg" alt="English" class="flag"></a></li>
+                            </ul>
+                        </li>
                     </li>
                 </ul>
             </nav>
-        </header>
+        </header>        
 
         <main class="main">
             <div class="seccion" id="inicio">
@@ -50,14 +67,14 @@
 
                     <ul class="ul">
                         <li class="li">
-                            <a href="https://www.linkedin.com/in/lucasbarrientosdev/" class="a" title="GitHub" target="_blank"
+                            <a href="https://www.linkedin.com/in/lucasbarrientosdev/" class="a" title="GitHub" target="_blank" id="linkedin"
                                 >Visita mi LinkedIn</a
                             >
                         </li>
                     </ul>
                     <ul class="ul">
                         <li class="li">
-                            <a href="https://github.com/lbm410" class="a" title="GitHub" target="_blank"
+                            <a href="https://github.com/lbm410" class="a" title="GitHub" target="_blank" id="github"
                                 >Visita mi GitHub</a
                             >
                         </li>
@@ -67,7 +84,7 @@
             </div>
 
             <section class="seccion works" id="trabajos">
-                <h2 class="h2">Proyectos</h2>
+                <h2 class="h2" id="proyectos">Proyectos</h2>
                 <p></p>
                 <div class="grid">
                     <article class="article">
@@ -90,7 +107,7 @@
                     </article>
                 </div>
                 <div class="tecnologias">
-                    <h4>Tecnologías utilizadas en el proyecto:</h4>
+                    <h4 id="tecnologias_utilizadas">Tecnologías utilizadas en el proyecto:</h4>
                     <img src="assets/html.svg" alt="" class="tech" />
                     <img src="assets/css.svg" alt="" class="tech" />
                     <img src="assets/javascript.svg" alt="" class="tech" />
@@ -117,7 +134,7 @@
                     </article>
                 </div>
                 <div class="tecnologias">
-                    <h4>Tecnologías utilizadas en el proyecto:</h4>
+                    <h4 id="tecnologias_utilizadas">Tecnologías utilizadas en el proyecto:</h4>
                     <img src="assets/html.svg" alt="" class="tech" />
                     <img src="assets/css.svg" alt="" class="tech" />
                     <img src="assets/javascript.svg" alt="" class="tech" />
@@ -126,8 +143,8 @@
 
             <section class="seccion" id="about">
                 <div class="about">
-                    <h2 class="h2">Sobre mi</h2>
-                    <p class="p">
+                    <h2 class="h2" id="sobre_mi">Sobre mi</h2>
+                    <p class="p" id="p1">
                         ¡Hola! Soy Lucas, un estudiante de tercer año de
                         <mark>Ingeniería Informática</mark> en la <strong>Universidad de Almería</strong>. En
                         estos tres años, he construido una sólida base en
@@ -135,14 +152,14 @@
                         como <mark>Java</mark>, <mark>C#</mark>, <mark>JavaScript</mark> y en el uso de <mark>HTML</mark> y <mark>CSS</mark>, manejándome con soltura en
                         herramientas como <mark>Visual Studio</mark> y <mark>Eclipse</mark>.
                     </p>
-                    <p class="p">
-                        Tecnologías que manejo:
+                    <p class="p" id="tecnologias_manejo">
+                        <strong>Tecnologías</strong> que manejo:
                     </p>
                     <img src="assets/html.svg" alt="" class="tech" />
                     <img src="assets/css.svg" alt="" class="tech" />
                     <img src="assets/javascript.svg" alt="" class="tech" />
                     <img src="assets/php.svg" alt="" class="tech" />
-                    <p class="p">
+                    <p class="p" id="p2">
                         Y aunque te podría decir que manejo Ensamblador básico
                         (y es cierto), lo que realmente quiero que sepas de mí
                         es que soy un aprendiz incansable y un entusiasta de la
@@ -151,7 +168,7 @@
                         por la tecnología con un impacto tangible en las
                         personas y las empresas.
                     </p>
-                    <p class="p">
+                    <p class="p" id="p3">
                         Si estás buscando a alguien que no solo codifique, sino
                         que comprenda el significado de su trabajo, esté abierto
                         al aprendizaje y siempre busque formas de mejorar, me
@@ -210,5 +227,9 @@
         <footer class="footer">
             <span class="span">Made with love ❤️ Lucas Barrientos</span>
         </footer>
+
+        <script src="/js/index.js"></script>
+
+
     </body>
 </html>
