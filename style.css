@@ -152,12 +152,13 @@ body {
     min-width: 5em;
 
     padding: 1em 2em;
+    position: fixed;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    z-index: 99;
 
 }
 
