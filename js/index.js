@@ -1,3 +1,22 @@
+// JavaScript para controlar el comportamiento del encabezado en dispositivos móviles
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll <= 0) {
+        // Estás arriba del todo
+        document.querySelector('.header').classList.remove('hidden');
+        document.querySelector('.header').classList.add('visible');
+    } else {
+        // Estás bajando
+        document.querySelector('.header').classList.add('hidden');
+        document.querySelector('.header').classList.remove('visible');
+    }
+});
+
+
+
 const darkMode = document.querySelector(".dark-mode");
 
 darkMode.addEventListener("click", () => {
