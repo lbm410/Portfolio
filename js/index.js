@@ -25,42 +25,47 @@ darkMode.addEventListener("click", () => {
   darkMode.querySelector("span:nth-child(2)").classList.toggle("active");
 });
 
-const langs = document.querySelector(".langs"),
-    links = document.querySelectorAll(".idioma-desplegable a"),
-    linkedin = document.querySelector(".a #linkedin"),
-    github = document.querySelector("#github"),
-    inicio = document.querySelector("#inicio"),
-    proyectos = document.querySelector("#proyectos"),
-    sobre_mi = document.querySelector("#sobre_mi"),
-    tecnologias_utilizadas = document.querySelector("#tecnologias_utilizadas"),
-    tecnologias_manejo = document.querySelector("#tecnologias_manejo"),
-    p1 = document.querySelector("#p1"),
-    p2 = document.querySelector("#p2"),
-    p3 = document.querySelector("#p3");
+document.addEventListener("DOMContentLoaded", function () {
+    const langs = document.querySelector(".langs");
+    const links = document.querySelectorAll(".idioma-desplegable a");
+    const linkedin = document.getElementById("linkedin");
+    const sobre_mi_description = document.getElementById("sobre_mi_description");
 
-let data = {
-    english: {
-        linkedin: "Visit my LinkedIn",
-        // Agrega otros textos en inglés aquí
-    },
-    spanish: {
-        linkedin: "Visita mi LinkedIn",
-        // Agrega otros textos en español aquí
-    },
-    // Puedes agregar más idiomas según sea necesario
-};
+    let data = {
+        english: {
+            linkedin: "Visit my LinkedIn",
+            sobre_mi_description: "Hello! I'm Lucas, a third-year student of <mark>Computer Engineering</mark> at the <strong>University of Almería</strong>. Over these three years, I have built a solid foundation in <strong>programming</strong>, developing skills in languages such as <mark>Java</mark>, <mark>C#</mark>, <mark>JavaScript</mark>, and in the use of <mark>HTML</mark> and <mark>CSS</mark>, adept at handling tools like <mark>Visual Studio</mark> and <mark>Eclipse</mark>.",
+            // Agrega otros textos en inglés aquí
+        },
+        spanish: {
+            linkedin: "Visita mi LinkedIn",
+            sobre_mi_description: "¡Hola! Soy Lucas, un estudiante de tercer año de <mark>Ingeniería Informática</mark> en la <strong>Universidad de Almería</strong>. En estos tres años, he construido una sólida base en <strong>programación</strong>, desarrollando habilidades en lenguajes como <mark>Java</mark>, <mark>C#</mark>, <mark>JavaScript</mark> y en el uso de <mark>HTML</mark> y <mark>CSS</mark>, manejándome con soltura en herramientas como <mark>Visual Studio</mark> y <mark>Eclipse</mark>.",
 
-links.forEach((el) => {
-    el.addEventListener("click", (e) => {
-        e.preventDefault();
-        langs.querySelector(".active").classList.remove("active");
-        el.classList.add("active");
+            // Agrega otros textos en español aquí
+        },
+        // Puedes agregar más idiomas según sea necesario
+    };
 
-        const attr = el.dataset.lang
-
-        linkedin.textContent = data[attr].linkedin;
-
+    links.forEach((el) => {
+        el.addEventListener("click", (e) => {
+            e.preventDefault();
+            
+            // Verificar si el elemento con la clase 'active' existe
+            const activeElement = langs.querySelector(".active");
+            if (activeElement) {
+                activeElement.classList.remove("active");
+            }
+            
+            el.classList.add("active");
+    
+            const attr = el.dataset.lang;
+    
+            linkedin.textContent = data[attr].linkedin;
+        });
     });
+    
 });
+
+
 
 

@@ -432,6 +432,7 @@ mark, .mark {
 .tech {
     width: 3em;
     margin: 2em;
+    margin-bottom: 3.5em;
     display: inline-block;
     flex-flow: row wrap;
     justify-content: center;
@@ -472,5 +473,10 @@ mark, .mark {
     .seccion#inicio {
         padding-top: 10em;
         padding-bottom: 15em;
+    }
+    
+    .tech {
+        margin: 1em;
+        margin-bottom: 2.5em;
     }
 }
