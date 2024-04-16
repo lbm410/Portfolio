@@ -495,3 +495,24 @@ mark, .mark {
         margin-bottom: 2.5em;
     }
 }
+
+.lucia {
+    .lucia {
+        background-image: url('path/to/your/image.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+}
+
+.h2.lucia {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    padding: 0;
+    font-size: 3em;
+    font-style: italic;
+}
