@@ -2,7 +2,7 @@
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    let currentScroll = window.scrollY || window.pageYOffSet;
 
     if (currentScroll <= 0) {
         // Estás arriba del todo
