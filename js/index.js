@@ -1,7 +1,7 @@
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function() {
-    let currentScroll = window.scrollY || window.pageYOffSet;
+    let currentScroll = window.scrollY || window.pageYOffset;
 
     if (currentScroll <= 0) {
         document.querySelector('.header').classList.remove('hidden');
