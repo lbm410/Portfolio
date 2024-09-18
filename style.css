@@ -496,6 +496,10 @@ mark, .mark {
     }
 }
 
+.tecnologias_utilizadas {
+    color: var(--texto-principal);
+}
+
 .lucia {
     .lucia {
         background-image: url('path/to/your/image.jpg');
