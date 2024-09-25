@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sobre_mi_p2 = document.getElementById("sobre_mi_p2");
     const sobre_mi_p3 = document.getElementById("sobre_mi_p3");
     const tecnologias_utilizadas = document.querySelectorAll('.tecnologias_utilizadas');
+    const quetal = document.getElementById("quetal");
 
     let data = {
         english: {
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sobre_mi_description: "Hi! I'm Lucas, a third-year student of <mark>Computer Engineering</mark> at the <strong>University of Almería</strong>. In these three years, I have built a solid foundation in <strong>programming</strong>, developing skills in languages such as <mark>Java</mark>, <mark>C#</mark>, <mark>JavaScript</mark>, and in the use of <mark>HTML</mark> and <mark>CSS</mark>, proficiently using tools like <mark>Visual Studio</mark> and <mark>Eclipse</mark>.",
             sobre_mi_p2: "And although I could tell you that I handle basic Assembly (and it's true), what I really want you to know about me is that I am a tireless learner and a technology enthusiast, always willing to grow and overcome new challenges. I am motivated by the idea of combining my passion for technology with a tangible impact on people and companies.",
             sobre_mi_p3: "If you are looking for someone who not only codes but also understands the meaning of their work, is open to learning, and always seeks ways to improve, I would love to connect with you and explore possible opportunities.",
+            quetal: "Hey, What's up?",
         },
         spanish: {
             linkedin: "Visita mi LinkedIn",
@@ -63,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sobre_mi_description: "¡Hola! Soy Lucas, un estudiante de tercer año de <mark>Ingeniería Informática</mark> en la <strong>Universidad de Almería</strong>. En estos tres años, he construido una sólida base en <strong>programación</strong>, desarrollando habilidades en lenguajes como <mark>Java</mark>, <mark>C#</mark>, <mark>JavaScript</mark> y en el uso de <mark>HTML</mark> y <mark>CSS</mark>, manejándome con soltura en herramientas como <mark>Visual Studio</mark> y <mark>Eclipse</mark>.",
             sobre_mi_p2: "Y aunque te podría decir que manejo Ensamblador básico (y es cierto), lo que realmente quiero que sepas de mí es que soy un aprendiz incansable y un entusiasta de la tecnología, siempre dispuesto a crecer y a superar nuevos retos. Me motiva la idea de combinar mi pasión por la tecnología con un impacto tangible en las personas y las empresas.",
             sobre_mi_p3: "Si estás buscando a alguien que no solo codifique, sino que comprenda el significado de su trabajo, esté abierto al aprendizaje y siempre busque formas de mejorar, me encantaría conectarme contigo y explorar posibles oportunidades.",
+            quetal: "Hey, ¿Qué tal?",
         },
     };
 
@@ -97,6 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
             sobre_mi_p3.innerHTML = data[attr].sobre_mi_p3;
 
             proyectos_title.textContent = data[attr].proyectos_title;
+
+            quetal.textContent = data[attr].quetal;
 
             tecnologias_utilizadas.forEach(element => {
                 element.textContent = data[attr].tecnologias_utilizadas;
