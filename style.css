@@ -534,7 +534,7 @@ mark, .mark {
     right: 15px; /* Ajusta la posición */
     width: 150px; /* Ajusta el tamaño para cubrir el logo */
     height: 50px; /* Ajusta el tamaño para cubrir el logo */
-    background-color: white; /* O cualquier otro color de fondo */
+    background-color: var(--background-color); /* O cualquier otro color de fondo */
     z-index: 2; /* Asegura que quede sobre el embed */
 }
 
