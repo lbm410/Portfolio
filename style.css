@@ -17,17 +17,12 @@
     --color-mark: rgba(116,116,116,.2);
     --svg: ;
 
-    --circulo1: invert(29%) sepia(71%) saturate(1236%) hue-rotate(78deg) brightness(92%) contrast(89%);
-    --circulo2: invert(24%) sepia(43%) saturate(3973%) hue-rotate(214deg) brightness(87%) contrast(85%);
-    --circulo3: invert(80%) sepia(5%) saturate(3944%) hue-rotate(63deg) brightness(91%) contrast(84%);
-    --circulo4: invert(50%) sepia(83%) saturate(212%) hue-rotate(263deg) brightness(84%) contrast(87%);
-
     --border-radius-1: 0.3rem;
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
 /* Variables para el modo oscuro */
-.dark-mode-variables{
+.dark-mode-variables {
     --texto-principal: white;
     --background-color: #4d4d4d;
     --color-white: #202528;
@@ -38,12 +33,79 @@
     --texto-principal-hover: black;
     --fondo-botones: white;
     --color-mark: rgb(116, 116, 116);
-    --svg: invert(1);
+    --svg: invert(1); /* Aplica inversión general en el modo oscuro */
+}
 
-    --circulo1: invert(1) sepia(71%) saturate(1236%) hue-rotate(78deg) brightness(92%) contrast(89%);
-    --circulo2: invert(1) sepia(43%) saturate(3973%) hue-rotate(214deg) brightness(87%) contrast(85%);
-    --circulo3: invert(1) sepia(5%) saturate(3944%) hue-rotate(63deg) brightness(91%) contrast(84%);
-    --circulo4: invert(1) sepia(83%) saturate(212%) hue-rotate(263deg) brightness(84%) contrast(87%);
+/* Asegurar que los íconos de idioma no cambien con el modo oscuro */
+.no-dark-filter img {
+    filter: none !important;
+}
+
+/* Aislar aún más los íconos en modo oscuro para evitar cualquier inversión */
+.dark-mode-variables .no-dark-filter,
+.dark-mode-variables .no-dark-filter img {
+    filter: none !important; /* Asegura que ningún filtro afecte a estos íconos */
+    mix-blend-mode: normal !important; /* Desactiva cualquier mezcla que pueda alterar el color */
+}
+
+
+
+/* Ajustes específicos del toggle button */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Desactiva cualquier filtro en el contenedor del toggle button para los íconos de idioma */
+.label {
+    filter: invert(0); /* Anula cualquier filtro de inversión */
+    background-color: transparent;
+    border-radius: 50px;
+    border: 0.1px solid var(--color-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 20px;
+    width: 44px;
+    transform: scale(1.5);
+}
+
+
+.label .ball {
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; /* Centrado vertical */
+    left: 2px;
+    height: 16px;
+    width: 16px;
+    transform: translate(0, -50%);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translate(24px, -50%);
+}
+
+.label i {
+    display: flex;
+    align-items: center; /* Alineación vertical de los íconos */
+    height: 12px;
+    width: 12px;
+}
+
+/* Asegurar que los íconos específicos del toggle no cambien en modo oscuro */
+.toggle-icon img {
+    filter: none;
 }
 
 /* Estilos generales */
@@ -77,6 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 form, button, input, textarea, select {
     font-family: inherit;
 }
+
 p a {
     display: inline;
     color: var(--texto-principal);
@@ -86,57 +149,21 @@ li {
     list-style-type: none;
     color: var(--texto-principal);
 }
+
 body {
     font-family: var(--tipo-principal);
     font-size: 100%;
     min-height: 100vh;
     background-color: var(--background-color);
-}
-
-/* Definición de estilos para los círculos */
-.circulos {
-    display: none;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    filter: blur(70px);
-    animation: circulo1 30s linear infinite both;
-}
-
-.circulos .circulo {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    filter: blur(50px);
-    animation: circulo1 100s linear infinite both;
-}
-
-.circulos .circulo1 {
-    top: 10%;
-    left: 10%;
-    filter: var(--circulo1);
-}
-
-@keyframes circulo1 {
-    from {
-        transform: rotate(0deg) scale(3);
-    }
-    to {
-        transform: rotate(360deg) scale(3);
-    }
+    transition: background 0.2s linear;
 }
 
 /* Definición de estilos para el encabezado */
 .header {
     width: 100%;
     min-width: 5em;
-
     padding: 1em 2em;
     position: fixed;
-
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -148,70 +175,23 @@ body {
     z-index: 2;
 }
 
-/**.header .h1 .a {}
-
-.header .nav {}**/
-
 .header .ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-
     z-index: 2;
 }
 
 .header .li {
     margin: 0 1em;
-
     z-index: 2;
 }
-.header .idioma-desplegable {
-    position: absolute;
-    display: none;
-    list-style: none;
-    background-color: var(--color-light);
-    border: 1px transparent var(--color-light);
-    border-radius: 4px;
-    top: 33px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(10px);
-}
-
-.header .nav .li {
-    position: relative;
-}
-
-.header .idioma-li:hover .idioma-desplegable {
-    display: block;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-}
-.idioma-desplegable li:hover {
-    background-color: rgba(0, 0, 0, .7);
-    border: 1px transparent var(--color-light);
-    border-radius: 4px;
-}
-
-.header .language {
-    height: 30px;
-    filter: var(--svg);
-}
-
-.header .flag {
-    height: 30px;
-    padding: 1px 3px 1px;
-}
-
-.langs {
-    cursor: pointer;
-}
 
 
-.dark-mode{
+
+
+.dark-mode {
     background-color: var(--color-light);
     display: flex;
     justify-content: space-between;
@@ -223,7 +203,7 @@ body {
     z-index: 99;
 }
 
-.dark-mode span{
+.dark-mode span {
     font-size: 1.2rem;
     width: 50%;
     height: 100%;
@@ -233,7 +213,7 @@ body {
     z-index: 99;
 }
 
-.dark-mode span.active{
+.dark-mode span.active {
     background-color: var(--color-primary);
     color: white;
     border-radius: var(--border-radius-1);
@@ -249,19 +229,17 @@ body {
         left: 0;
         width: 100%;
         z-index: 99;
-        transition: top 0.3s; /* Agregamos una transición suave para que el encabezado desaparezca/aparezca */
+        transition: top 0.3s;
     }
 
     .header.hidden {
-        top: -100px; /* Mover el encabezado fuera de la pantalla */
+        top: -100px;
     }
 
     .header.visible {
-        top: 0; /* Mostrar el encabezado en la parte superior */
+        top: 0;
     }
 }
-
-
 
 /* Definición de estilos para la sección principal */
 .main {
@@ -290,7 +268,7 @@ body {
     font-size: 1.2em;
 }
 
-.seccion .ul{
+.seccion .ul {
     display: inline-block;
     flex-flow: row wrap;
     justify-content: center;
@@ -298,12 +276,12 @@ body {
     margin: 2em 0 0;
 }
 
-.seccion .ul .a{
-    border-bottom: 1px solid var(--texto-principal);   
+.seccion .ul .a {
+    border-bottom: 1px solid var(--texto-principal);
     color: var(--texto-principal);
     text-transform: uppercase;
     font-weight: 500;
-    padding: 1em 1em 1em; 
+    padding: 1em 1em 1em;
     transition: all .2s ease;
 }
 
@@ -474,9 +452,21 @@ mark, .mark {
         padding-top: 10em;
         padding-bottom: 15em;
     }
-    
+
     .tech {
         margin: 1em;
         margin-bottom: 2.5em;
     }
 }
+@media only screen and (max-width: 768px) {
+    /* Oculta todos los elementos de la lista excepto los dos últimos */
+    .header .ul .li:not(:nth-last-child(-n+2)) {
+        display: none;
+    }
+
+    /* Centra el selector de modo oscuro y el de idioma */
+    .header .ul {
+        justify-content: center;
+    }
+}
+
