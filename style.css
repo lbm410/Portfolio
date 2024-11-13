@@ -17,6 +17,11 @@
     --color-mark: rgba(116,116,116,.2);
     --svg: ;
 
+    --circulo1: invert(29%) sepia(71%) saturate(1236%) hue-rotate(78deg) brightness(92%) contrast(89%);
+    --circulo2: invert(24%) sepia(43%) saturate(3973%) hue-rotate(214deg) brightness(87%) contrast(85%);
+    --circulo3: invert(80%) sepia(5%) saturate(3944%) hue-rotate(63deg) brightness(91%) contrast(84%);
+    --circulo4: invert(50%) sepia(83%) saturate(212%) hue-rotate(263deg) brightness(84%) contrast(87%);
+
     --border-radius-1: 0.3rem;
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
@@ -24,7 +29,7 @@
 /* Variables para el modo oscuro */
 .dark-mode-variables{
     --texto-principal: white;
-    --background-color: #3f3f3f;
+    --background-color: #4d4d4d;
     --color-white: #202528;
     --color-dark: #edeffd;
     --color-dark-variant: #a3bdcc;
@@ -35,6 +40,10 @@
     --color-mark: rgb(116, 116, 116);
     --svg: invert(1);
 
+    --circulo1: invert(1) sepia(71%) saturate(1236%) hue-rotate(78deg) brightness(92%) contrast(89%);
+    --circulo2: invert(1) sepia(43%) saturate(3973%) hue-rotate(214deg) brightness(87%) contrast(85%);
+    --circulo3: invert(1) sepia(5%) saturate(3944%) hue-rotate(63deg) brightness(91%) contrast(84%);
+    --circulo4: invert(1) sepia(83%) saturate(212%) hue-rotate(263deg) brightness(84%) contrast(87%);
 }
 
 /* Estilos generales */
@@ -84,13 +93,48 @@ body {
     background-color: var(--background-color);
 }
 
+/* Definición de estilos para los círculos */
+.circulos {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: blur(70px);
+    animation: circulo1 30s linear infinite both;
+}
+
+.circulos .circulo {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    filter: blur(50px);
+    animation: circulo1 100s linear infinite both;
+}
+
+.circulos .circulo1 {
+    top: 10%;
+    left: 10%;
+    filter: var(--circulo1);
+}
+
+@keyframes circulo1 {
+    from {
+        transform: rotate(0deg) scale(3);
+    }
+    to {
+        transform: rotate(360deg) scale(3);
+    }
+}
+
 /* Definición de estilos para el encabezado */
 .header {
     width: 100%;
     min-width: 5em;
 
     padding: 1em 2em;
-    margin-top: -3em;
     position: fixed;
 
     display: flex;
@@ -101,7 +145,7 @@ body {
 }
 
 .header .h1 {
-    z-index: 99;
+    z-index: 2;
 }
 
 /**.header .h1 .a {}
@@ -114,7 +158,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    z-index: 99;
+    z-index: 2;
 }
 
 .header .li {
@@ -165,22 +209,7 @@ body {
 .langs {
     cursor: pointer;
 }
-/* 
-@media (max-width: 768px) {
-    .header .idioma-li:hover .idioma-desplegable {
-        display: none;
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(10px);
-    }
 
-    .header .idioma-li.active .idioma-desplegable {
-        display: block;
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-    }
-} */
 
 .dark-mode{
     background-color: var(--color-light);
@@ -228,17 +257,7 @@ body {
     }
 
     .header.visible {
-        top: 3em; /* Mostrar el encabezado en la parte superior */
-    }
-    /*Estilos del 3D*/
-    .spline {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 3em;
-        margin-bottom: -8em;
-        
+        top: 0; /* Mostrar el encabezado en la parte superior */
     }
 }
 
@@ -460,96 +479,4 @@ mark, .mark {
         margin: 1em;
         margin-bottom: 2.5em;
     }
-}
-
-.tecnologias_utilizadas {
-    color: var(--texto-principal);
-}
-
-.lucia {
-    .lucia {
-        background-image: url('path/to/your/image.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-    }
-}
-
-.h2.lucia {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: 0.2em;
-    padding: 0;
-    font-size: 3em;
-    font-style: italic;
-}
-
-.bg {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-    background-repeat: repeat;
-    animation: bg-animation .2s infinite;
-    opacity: .95;
-    visibility: visible;
-    z-index: -1;
-  }
-  
-  @keyframes bg-animation {
-      0% { transform: translate(0,0) }
-      10% { transform: translate(-5%,-5%) }
-      20% { transform: translate(-10%,5%) }
-      30% { transform: translate(5%,-10%) }
-      40% { transform: translate(-5%,15%) }
-      50% { transform: translate(-10%,5%) }
-      60% { transform: translate(15%,0) }
-      70% { transform: translate(0,10%) }
-      80% { transform: translate(-15%,0) }
-      90% { transform: translate(10%,5%) }
-      100% { transform: translate(5%,0) }
-  }
-
-  .spline {
-    width: 100%;
-    height: 100vh; /* Esto hará que ocupe toda la altura de la ventana */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3em;
-    margin-bottom: -8em;
-    
-}
-
-.overlay-logo {
-    position: absolute; /* Se ajusta al logo que estás ocultando */
-    bottom: -30px; /* Ajusta la posición */
-    right: 15px; /* Ajusta la posición */
-    width: 150px; /* Ajusta el tamaño para cubrir el logo */
-    height: 50px; /* Ajusta el tamaño para cubrir el logo */
-    background-color: var(--background-color); /* O cualquier otro color de fondo */
-    z-index: 2; /* Asegura que quede sobre el embed */
-}
-
-/* Media query para pantallas de teléfono (por debajo de 768px de ancho) */
-@media only screen and (max-width: 768px) {
-    .overlay-logo {
-        position: absolute; /* Se ajusta al logo que estás ocultando */
-        bottom: -30px; /* Ajusta la posición */
-        height: 39px;
-        border: rgba(255, 255, 255, 0.5);
-        border-radius: 4px;
-        display: none;
-    }
-}
-
-.spline-watermark {
-    display: none !important;
 }
