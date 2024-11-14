@@ -93,7 +93,7 @@
 }
 
 .checkbox:checked + .label .ball {
-    transform: translate(24px, -50%);
+    transform: translate(22px, -50%);
 }
 
 .label i {
