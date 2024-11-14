@@ -5,7 +5,7 @@ Bienvenido a mi portfolio personal. Soy Lucas Barrientos, un desarrollador front
 
 ## Sobre Mí
 
-Soy un estudiante de tercer año de **Ingeniería Informática** en la **Universidad de Almería**, apasionado por la tecnología y siempre buscando nuevos retos. Tengo experiencia en una amplia gama de tecnologías y herramientas, como **HTML**, **CSS**, **JavaScript**, **Node.js**, **MongoDB**, entre otros. Mi objetivo es no solo codificar, sino crear experiencias digitales que ofrezcan valor real a los usuarios y las empresas.
+Soy un estudiante de cuarto año de **Ingeniería Informática** en la **Universidad de Almería**, apasionado por la tecnología y siempre buscando nuevos retos. Tengo experiencia en una amplia gama de tecnologías y herramientas, como **HTML**, **CSS**, **JavaScript**, **Node.js**, **MongoDB**, entre otros. Mi objetivo es no solo codificar, sino crear experiencias digitales que ofrezcan valor real a los usuarios y las empresas.
 
 ### Tecnologías y Habilidades
 
