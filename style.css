@@ -470,3 +470,33 @@ mark, .mark {
     }
 }
 
+.wrapper {
+    display: grid;
+    place-items: center;
+
+  }
+  
+  .typing-demo {
+    width: 18.5ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    color: var(--texto-principal);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 4.2em;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
