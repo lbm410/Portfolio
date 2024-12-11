@@ -477,8 +477,8 @@ mark, .mark {
   }
   
   .typing-demo {
-    width: 18.5ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    width: 16ch;
+    animation: typing 2s steps(19), blink .5s step-end infinite alternate;
     color: var(--texto-principal);
     white-space: nowrap;
     overflow: hidden;
