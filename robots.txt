@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Bloqueo de carpetas privadas (si existieran)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://lucasbarrientos.es/sitemap.xml
