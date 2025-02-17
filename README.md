@@ -9,9 +9,9 @@ Soy un estudiante de cuarto año de **Ingeniería Informática** en la **Univers
 
 ### Tecnologías y Habilidades
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Node.js, MySQL, MongoDB
-- **Herramientas:** Git, Visual Studio, Eclipse
+- **Frontend:** HTML, CSS, JavaScript, React
+- **Backend:** Node.js, MySQL, MongoDB, Express
+- **Herramientas:** Git, Visual Studio, Eclipse, IntelliJ Idea
 - **Otros:** Diseño de interfaces y experiencia en el manejo de frameworks para frontend
 
 ## Proyectos Destacados
