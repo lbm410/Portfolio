@@ -1,472 +1,594 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 /* Definición de variables */
 :root {
-    --rojo: #e50914;
-    --background-color: white;
-    --gris: #303030;
-    --gris-f: #757575;
-    --negro: black;
-    --color-light: rgba(0, 0, 0, 0.2);
-    --tipo-titular: 'Montserrat', sans-serif;
-    --tipo-principal: 'IBM Plex Mono', monospace;
-    --texto-principal: black;
-    --color-primary: #757575;
-    --texto-principal-hover: white;
-    --fondo-botones: black;
-    --color-mark: rgba(116,116,116,.2);
-    --svg: ;
+  --rojo: #e50914;
+  --background-color: white;
+  --gris: #303030;
+  --gris-f: #757575;
+  --negro: black;
+  --color-light: rgba(0, 0, 0, 0.2);
+  --tipo-titular: "Montserrat", sans-serif;
+  --tipo-principal: "IBM Plex Mono", monospace;
+  --texto-principal: black;
+  --color-primary: #757575;
+  --texto-principal-hover: white;
+  --fondo-botones: black;
+  --color-mark: rgba(116, 116, 116, 0.2);
+  --svg: ;
 
-    --border-radius-1: 0.3rem;
+  --border-radius-1: 0.3rem;
 }
 
 /* Variables para el modo oscuro */
 .dark-mode-variables {
-    --texto-principal: white;
-    --background-color: #4d4d4d;
-    --color-white: #202528;
-    --color-dark: #edeffd;
-    --color-dark-variant: #a3bdcc;
-    --color-light: rgba(175, 175, 175, 0.4);
-    --texto-principal-hover: black;
-    --fondo-botones: white;
-    --color-mark: rgb(116, 116, 116);
-    --svg: invert(1); /* Aplica inversión general en el modo oscuro */
+  --texto-principal: white;
+  --background-color: #4d4d4d;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(175, 175, 175, 0.4);
+  --texto-principal-hover: black;
+  --fondo-botones: white;
+  --color-mark: rgb(116, 116, 116);
+  --svg: invert(1); /* Aplica inversión general en el modo oscuro */
 }
 
 /* Asegurar que los íconos de idioma no cambien con el modo oscuro */
 .no-dark-filter img {
-    filter: none !important;
+  filter: none !important;
 }
 
 /* Aislar aún más los íconos en modo oscuro para evitar cualquier inversión */
 .dark-mode-variables .no-dark-filter,
 .dark-mode-variables .no-dark-filter img {
-    filter: none !important; /* Asegura que ningún filtro afecte a estos íconos */
-    mix-blend-mode: normal !important; /* Desactiva cualquier mezcla que pueda alterar el color */
+  filter: none !important; /* Asegura que ningún filtro afecte a estos íconos */
+  mix-blend-mode: normal !important; /* Desactiva cualquier mezcla que pueda alterar el color */
 }
-
-
 
 /* Ajustes específicos del toggle button */
 .checkbox {
-    opacity: 0;
-    position: absolute;
+  opacity: 0;
+  position: absolute;
 }
 
 .language {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 /* Desactiva cualquier filtro en el contenedor del toggle button para los íconos de idioma */
 .label {
-    filter: invert(0); /* Anula cualquier filtro de inversión */
-    background-color: transparent;
-    border-radius: 50px;
-    border: 0.1px solid var(--color-primary);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    height: 20px;
-    width: 44px;
-    transform: scale(1.5);
+  filter: invert(0); /* Anula cualquier filtro de inversión */
+  background-color: transparent;
+  border-radius: 50px;
+  border: 0.1px solid var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  height: 20px;
+  width: 44px;
+  transform: scale(1.5);
 }
 
-
 .label .ball {
-    background-color: var(--color-primary);
-    border-radius: 50%;
-    position: absolute;
-    top: 50%; /* Centrado vertical */
-    left: 2px;
-    height: 16px;
-    width: 16px;
-    transform: translate(0, -50%);
-    transition: transform 0.2s linear;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; /* Centrado vertical */
+  left: 2px;
+  height: 16px;
+  width: 16px;
+  transform: translate(0, -50%);
+  transition: transform 0.2s linear;
 }
 
 .checkbox:checked + .label .ball {
-    transform: translate(22px, -50%);
+  transform: translate(22px, -50%);
 }
 
 .label i {
-    display: flex;
-    align-items: center; /* Alineación vertical de los íconos */
-    height: 12px;
-    width: 12px;
+  display: flex;
+  align-items: center; /* Alineación vertical de los íconos */
+  height: 12px;
+  width: 12px;
 }
 
 /* Asegurar que los íconos específicos del toggle no cambien en modo oscuro */
 .toggle-icon img {
-    filter: none;
+  filter: none;
 }
 
 /* Estilos generales */
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
 }
 
-img, figure, video {
-    max-width: 100%;
-    width: 100%;
-    object-fit: cover;
+img,
+figure,
+video {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: inherit;
-    color: var(--texto-principal);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  color: var(--texto-principal);
 }
 
-form, button, input, textarea, select {
-    font-family: inherit;
+form,
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 p a {
-    display: inline;
-    color: var(--texto-principal);
+  display: inline;
+  color: var(--texto-principal);
 }
 
 li {
-    list-style-type: none;
-    color: var(--texto-principal);
+  list-style-type: none;
+  color: var(--texto-principal);
 }
 
 body {
-    font-family: var(--tipo-principal);
-    font-size: 100%;
-    min-height: 100vh;
-    background-color: var(--background-color);
-    transition: background 0.2s linear;
+  font-family: var(--tipo-principal);
+  font-size: 100%;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  transition: background 0.2s linear;
 }
 
 /* Definición de estilos para el encabezado */
 .header {
-    width: 100%;
-    min-width: 5em;
-    padding: 1em 2em;
-    position: fixed;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
+  width: 100%;
+  min-width: 5em;
+  padding: 1em 2em;
+  position: fixed;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
 }
 
 .header .h1 {
-    z-index: 2;
+  z-index: 2;
 }
 
 .header .ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
 }
 
 .header .li {
-    margin: 0 1em;
-    z-index: 2;
+  margin: 0 1em;
+  z-index: 2;
 }
 
-
-
-
 .dark-mode {
-    background-color: var(--color-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1.6rem;
-    width: 4.2rem;
-    cursor: pointer;
-    background-color: transparent;
-    z-index: 99;
+  background-color: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.6rem;
+  width: 4.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 99;
 }
 
 .dark-mode span {
-    font-size: 1.2rem;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
 }
 
 .dark-mode span.active {
-    background-color: var(--color-primary);
-    color: white;
-    border-radius: var(--border-radius-1);
-    z-index: 99;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-1);
+  z-index: 99;
 }
 
 @media only screen and (max-width: 768px) {
-    /* Estilos para dispositivos móviles */
-    .header {
-        position: fixed;
-        justify-content: center;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 99;
-        transition: top 0.3s;
-    }
+  /* Estilos para dispositivos móviles */
+  .header {
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    transition: top 0.3s;
+  }
 
-    .header.hidden {
-        top: -100px;
-    }
+  .header.hidden {
+    top: -100px;
+  }
 
-    .header.visible {
-        top: 0;
-    }
+  .header.visible {
+    top: 0;
+  }
 }
 
 /* Definición de estilos para la sección principal */
 .main {
-    margin: 1em 0;
-    text-align: center;
-    position: relative;
-    z-index: 2;
+  margin: 1em 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Added styles for Experience section */
+.experience {
+  background-color: var(--background-color);
+  padding: 4em 2em;
+}
+
+.experience .h2 {
+  margin-bottom: 3rem;
+  color: var(--texto-principal);
+}
+
+.experience-grid {
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experience-item {
+  text-align: left;
+  padding: 2rem;
+  border-left: 3px solid var(--color-primary);
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-1);
+  transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+  border-left-color: var(--texto-principal);
+  transform: translateX(5px);
+}
+
+.experience-header {
+  margin-bottom: 1rem;
+}
+
+.h3-exp {
+  font-family: var(--tipo-titular);
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--texto-principal);
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.period,
+.location {
+  font-size: 0.9em;
+  color: var(--gris-f);
+  margin-bottom: 0.2rem;
+}
+
+.experience-description p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: var(--texto-principal);
+  margin-bottom: 1rem;
+}
+
+.experience-bullets {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.experience-bullets li {
+  font-size: 1em;
+  line-height: 1.6;
+  color: var(--texto-principal);
+  margin-bottom: 0.5rem;
+}
+
+/* Added styles for Education section */
+.h3-education {
+  font-family: var(--tipo-titular);
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--texto-principal);
+  margin: 3rem 0 1.5rem 0;
+  text-align: left;
+}
+
+.education-item {
+  text-align: left;
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-1);
+  border-left: 3px solid var(--color-primary);
+}
+
+.education-institution {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--texto-principal);
+  margin-bottom: 0.5rem;
+}
+
+.education-degree {
+  font-size: 1.1em;
+  color: var(--texto-principal);
+  margin-bottom: 0.3rem;
+}
+
+.education-period {
+  font-size: 0.9em;
+  color: var(--gris-f);
 }
 
 .seccion {
-    width: 100%;
-    min-height: 80vh;
-    padding: 2em;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  min-height: 80vh;
+  padding: 2em;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .seccion#inicio {
-    padding-top: 12em;
-    padding-bottom: 21em;
+  padding-top: 12em;
+  padding-bottom: 21em;
 }
 
 .seccion .info {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .seccion .ul {
-    display: inline-block;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 2em 0 0;
+  display: inline-block;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 0;
 }
 
 .seccion .ul .a {
-    border-bottom: 1px solid var(--texto-principal);
-    color: var(--texto-principal);
-    text-transform: uppercase;
-    font-weight: 500;
-    padding: 1em 1em 1em;
-    transition: all .2s ease;
+  border-bottom: 1px solid var(--texto-principal);
+  color: var(--texto-principal);
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1em 1em 1em;
+  transition: all .2s ease;
 }
 
 .seccion .ul .a:hover {
-    background: var(--fondo-botones);
-    color: var(--texto-principal-hover);
+  background: var(--fondo-botones);
+  color: var(--texto-principal-hover);
 }
 
 .seccion .h2 {
-    font-family: var(--tipo-titular);
-    color: var(--texto-principal);
-    font-weight: 500;
-    font-size: 5em;
-    line-height: 1em;
+  font-family: var(--tipo-titular);
+  color: var(--texto-principal);
+  font-weight: 500;
+  font-size: 5em;
+  line-height: 1em;
 }
 
 .seccion .h3 {
-    color: var(--texto-principal);
-    font-family: var(--tipo-titular);
-    font-size: 3.5em;
-    font-style: italic;
+  color: var(--texto-principal);
+  font-family: var(--tipo-titular);
+  font-size: 3.5em;
+  font-style: italic;
 }
 
 .arrowdown {
-    position: relative;
-    top: 160px;
-    height: 2em;
-    width: 2em;
-    filter: var(--svg);
+  position: relative;
+  top: 160px;
+  height: 2em;
+  width: 2em;
+  filter: var(--svg);
 }
 
 .seccion .grid {
-    max-width: 40em;
-    width: 90%;
-    margin: 3em 0;
-    display: flex;
-    flex-wrap: row nowrap;
-    justify-content: space-between;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  max-width: 40em;
+  width: 90%;
+  margin: 3em 0;
+  display: flex;
+  flex-wrap: row nowrap;
+  justify-content: space-between;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
 }
 
 .seccion .article {
-    width: 100%;
-    min-height: 20vh;
-    margin-bottom: 0%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  width: 100%;
+  min-height: 20vh;
+  margin-bottom: 0%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .seccion .h4 {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    backdrop-filter: blur(1rem);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    color: white;
-    font-size: 1.4em;
-    font-weight: 500;
-    font-style: italic;
-    font-family: var(--tipo-titular);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    transform: translateZ(1) scale(1.5);
-    transition: all .5s ease;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1rem);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  color: white;
+  font-size: 1.4em;
+  font-weight: 500;
+  font-style: italic;
+  font-family: var(--tipo-titular);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(1) scale(1.5);
+  transition: all .5s ease;
 }
 
 .seccion .article:hover .h4 {
-    opacity: 1;
-    transform: translateZ(1) scale(1);
+  opacity: 1;
+  transform: translateZ(1) scale(1);
 }
 
 .works .h2 {
-    margin: 0 0 1rem;
+  margin: 0 0 1rem;
 }
 
 /* Definición de estilos para la sección "Sobre mí" */
 .about {
-    color: var(--texto-principal);
+  color: var(--texto-principal);
 }
 
 .about .h2 {
-    margin: 0 0 2rem;
+  margin: 0 0 2rem;
 }
 
 .about .p {
-    max-width: 40rem;
-    margin: 0 0 2rem;
-    text-align: left;
-    font-size: 1.3em;
+  max-width: 40rem;
+  margin: 0 0 2rem;
+  text-align: left;
+  font-size: 1.3em;
 }
 
 .about .rrss {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .about .li {
-    margin: 0 1em;
+  margin: 0 1em;
 }
 
 .about .svg {
-    width: 2em;
-    height: 2em;
-    vertical-align: middle;
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
 }
 
-mark, .mark {
-    padding: 1px 2px;
-    border: 1px transparent;
-    border-radius: 2px;
-    color: var(--texto-principal);
-    background: var(--color-mark);
-    font-weight: 500;
+mark,
+.mark {
+  padding: 1px 2px;
+  border: 1px transparent;
+  border-radius: 2px;
+  color: var(--texto-principal);
+  background: var(--color-mark);
+  font-weight: 500;
 }
 
 .tech {
-    width: 3em;
-    margin: 2em;
-    margin-bottom: 3.5em;
-    display: inline-block;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    filter: var(--svg);
+  width: 3em;
+  margin: 2em;
+  margin-bottom: 3.5em;
+  display: inline-block;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  filter: var(--svg);
 }
 
 /* Definición de estilos para el pie de página */
 .footer {
-    text-align: center;
-    color: var(--texto-principal);
-    padding: 2em 0;
-    z-index: 2;
+  text-align: center;
+  color: var(--texto-principal);
+  padding: 2em 0;
+  z-index: 2;
 }
 
 .footer .span {
-    z-index: 2;
+  z-index: 2;
 }
 
 /* Estilos responsivos */
 @media only screen and (max-width: 768px) {
-    .header {
-        padding: 1em;
-    }
+  .header {
+    padding: 1em;
+  }
 
-    .seccion {
-        padding: 1em;
-    }
+  .seccion {
+    padding: 1em;
+  }
 
-    .seccion .h2 {
-        font-size: 3.5em;
-    }
+  .seccion .h2 {
+    font-size: 3.5em;
+  }
 
-    .seccion .h3 {
-        font-size: 2.5em;
-    }
+  .seccion .h3 {
+    font-size: 2.5em;
+  }
 
-    .seccion#inicio {
-        padding-top: 10em;
-        padding-bottom: 15em;
-    }
+  .seccion#inicio {
+    padding-top: 10em;
+    padding-bottom: 15em;
+  }
 
-    .tech {
-        margin: 1em;
-        margin-bottom: 2.5em;
-    }
+  .tech {
+    margin: 1em;
+    margin-bottom: 2.5em;
+  }
 }
 @media only screen and (max-width: 768px) {
-    /* Oculta todos los elementos de la lista excepto los dos últimos */
-    .header .ul .li:not(:nth-last-child(-n+2)) {
-        display: none;
-    }
+  /* Oculta todos los elementos de la lista excepto los dos últimos */
+  .header .ul .li:not(:nth-last-child(-n + 2)) {
+    display: none;
+  }
 
-    /* Centra el selector de modo oscuro y el de idioma */
-    .header .ul {
-        justify-content: center;
-    }
+  /* Centra el selector de modo oscuro y el de idioma */
+  .header .ul {
+    justify-content: center;
+  }
 }
-
