@@ -541,6 +541,105 @@ mark,
   filter: var(--svg);
 }
 
+/* Subsección de proyectos: Industrial & Enterprise / Web & Product */
+.projects-category-title {
+  font-family: var(--tipo-titular);
+  font-size: 1.8em;
+  font-weight: 500;
+  color: var(--texto-principal);
+  margin: 2rem 0 0.5rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* Tarjeta para proyecto confidencial (sin imagen ni enlace) */
+.confidential-grid {
+  box-shadow: none !important;
+  background-color: transparent;
+}
+
+.confidential-project {
+  width: 100%;
+  text-align: left;
+  padding: 2rem;
+  background-color: var(--color-light);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--border-radius-1);
+  transition: all 0.3s ease;
+}
+
+.confidential-project:hover {
+  border-left-color: var(--texto-principal);
+  transform: translateX(5px);
+}
+
+.confidential-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.h4-confidential {
+  font-family: var(--tipo-titular);
+  font-size: 1.4em;
+  font-weight: 600;
+  color: var(--texto-principal);
+  position: static;
+  background: none;
+  backdrop-filter: none;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  display: block;
+  transform: none;
+  font-style: normal;
+}
+
+.confidential-desc {
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: var(--texto-principal);
+}
+
+.confidential-note {
+  font-size: 0.85em;
+  color: var(--gris-f);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+/* Etiquetas de tecnología en texto */
+.tech-tag {
+  display: inline-block;
+  margin: 0.4em 0.4em;
+  padding: 0.4em 0.9em;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-1);
+  font-family: var(--tipo-principal);
+  font-size: 0.9em;
+  color: var(--texto-principal);
+  background-color: transparent;
+}
+
+/* Indicador de rol previo en la experiencia */
+.experience-item.previous-role {
+  opacity: 0.85;
+  border-left-color: var(--gris-f);
+}
+
+.previous-role-tag {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.2em 0.6em;
+  border: 1px solid var(--gris-f);
+  border-radius: var(--border-radius-1);
+  font-size: 0.75em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gris-f);
+}
+
 /* Definición de estilos para el pie de página */
 .footer {
   text-align: center;
